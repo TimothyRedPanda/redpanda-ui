@@ -20,7 +20,7 @@ import { Button } from 'ui-redpanda';
 import "ui-redpanda/dist/style.css";
 
 const export App = () => {
-    return <Button>Click Me</Button>
+    return <Button onClick={() => {console.log("Your function here")}}>Click Me</Button>
 }
 ```
 
