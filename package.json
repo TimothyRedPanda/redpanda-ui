@@ -18,16 +18,22 @@
 	},
 	"sideEffects": false,
 	"scripts": {
-		"dev": "vite",
-		"prebuild": "rm -rf dist",
 		"build": "tsc && vite build",
+		"build-storybook": "storybook build",
+		"dev": "vite",
 		"lint": "eslint .",
-		"preview": "vite preview",
+		"prebuild": "rm -rf dist",
 		"prepublish": "npm run build",
+		"preview": "vite preview",
 		"storybook": "storybook dev -p 6006",
-		"build-storybook": "storybook build"
+		"test": "vitest",
+		"coverage": "vitest --coverage"
 	},
 	"dependencies": {
+		"@testing-library/jest-dom": "^6.4.8",
+		"@testing-library/react": "^16.0.0",
+		"@testing-library/user-event": "^14.5.2",
+		"jsdom": "^24.1.1",
 		"react": "^18.3.1",
 		"react-dom": "^18.3.1",
 		"vite-tsconfig-paths": "^5.0.1"
@@ -53,6 +59,7 @@
 		"tailwindcss": "^3.4.9",
 		"typescript": "^5.5.4",
 		"vite": "^5.4.0",
-		"vite-plugin-dts": "^4.0.2"
+		"vite-plugin-dts": "^4.0.2",
+		"vitest": "^2.0.5"
 	}
 }
