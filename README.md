@@ -26,15 +26,23 @@ const export App = () => {
 
 ### GitHub
 
+1) Clone the project down.
+
 ```bash
 git clone https://github.com/TimothyRedPanda/redpanda-ui.git
 ```
+2) Move into the correct directory.
+
 ```bash
 cd ./redpanda-ui
 ```
+3) Install the dependencies and build the project.
+
 ```bash
 npm install
 ```
+4) Run Storybook to view the components in the browser.
+
 ```bash
 npm run storybook
 ```
