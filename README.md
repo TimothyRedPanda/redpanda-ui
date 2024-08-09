@@ -3,6 +3,7 @@
 ## Getting Started
 
 1) Install Red Panda UI into your React project.
+
 ```bash
 npm i ui-redpanda
 ```
@@ -21,4 +22,19 @@ import "ui-redpanda/dist/style.css";
 const export App = () => {
     return <Button>Click Me</Button>
 }
+```
+
+### GitHub
+
+```bash
+git clone https://github.com/TimothyRedPanda/redpanda-ui.git
+```
+```bash
+cd ./redpanda-ui
+```
+```bash
+npm install
+```
+```bash
+npm run storybook
 ```
