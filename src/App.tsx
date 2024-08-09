@@ -1,13 +1,5 @@
-import { Button } from "ui-redpanda";
-
 function App() {
-	return (
-		<>
-			<div>
-				<Button>Party</Button>
-			</div>
-		</>
-	);
+	return <h1>Red Panda UI</h1>;
 }
 
 export default App;
