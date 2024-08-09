@@ -1,0 +1,58 @@
+{
+	"name": "ui-redpanda",
+	"private": false,
+	"version": "0.0.4",
+	"type": "module",
+	"license": "MIT",
+	"files": [
+		"dist"
+	],
+	"main": "dist/ui-redpanda.umd.cjs",
+	"module": ".dist/ui-redpanda.js",
+	"exports": {
+		".": {
+			"import": "./dist/ui-redpanda.js",
+			"require": "./dist/ui-redpanda.umd.cjs"
+		},
+		"./dist/style.css": "./dist/style.css"
+	},
+	"sideEffects": false,
+	"scripts": {
+		"dev": "vite",
+		"prebuild": "rm -rf dist",
+		"build": "tsc && vite build",
+		"lint": "eslint .",
+		"preview": "vite preview",
+		"prepublish": "npm run build",
+		"storybook": "storybook dev -p 6006",
+		"build-storybook": "storybook build"
+	},
+	"dependencies": {
+		"react": "^18.3.1",
+		"react-dom": "^18.3.1",
+		"vite-tsconfig-paths": "^5.0.1"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.8.3",
+		"@chromatic-com/storybook": "^1.6.1",
+		"@storybook/addon-essentials": "^8.2.8",
+		"@storybook/addon-interactions": "^8.2.8",
+		"@storybook/addon-links": "^8.2.8",
+		"@storybook/addon-onboarding": "^8.2.8",
+		"@storybook/blocks": "^8.2.8",
+		"@storybook/react": "^8.2.8",
+		"@storybook/react-vite": "^8.2.8",
+		"@storybook/test": "^8.2.8",
+		"@types/node": "^22.1.0",
+		"@types/react": "^18.3.3",
+		"@types/react-dom": "^18.3.0",
+		"@vitejs/plugin-react": "^4.3.1",
+		"autoprefixer": "^10.4.20",
+		"postcss": "^8.4.41",
+		"storybook": "^8.2.8",
+		"tailwindcss": "^3.4.9",
+		"typescript": "^5.5.4",
+		"vite": "^5.4.0",
+		"vite-plugin-dts": "^4.0.2"
+	}
+}
