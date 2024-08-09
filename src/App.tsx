@@ -1,5 +1,20 @@
+import { Button } from "ui-redpanda";
+
 function App() {
-	return <h1>Red Panda UI</h1>;
+	return (
+		<main
+			style={{
+				display: "flex",
+				width: "100%",
+				justifyContent: "center",
+				overflow: "hidden",
+			}}
+		>
+			<Button onClick={() => console.log("Hello, World!")}>
+				Click Me!
+			</Button>
+		</main>
+	);
 }
 
 export default App;
