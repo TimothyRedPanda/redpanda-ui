@@ -1,5 +1,3 @@
-import { Button } from "ui-redpanda";
-
 function App() {
 	return (
 		<main
@@ -10,9 +8,7 @@ function App() {
 				overflow: "hidden",
 			}}
 		>
-			<Button onClick={() => console.log("Hello, World!")}>
-				Click Me!
-			</Button>
+			<h1>Red Panda UI</h1>
 		</main>
 	);
 }

@@ -6,17 +6,32 @@ interface ButtonProps {
 	className?: string;
 }
 
+const classMap = {
+	"": "bg-transparent text-slate-400 hover:text-slate-800 font-bold",
+	contained: "bg-red-400 text-slate-100 hover:bg-red-800",
+	outlined:
+		"border border-red-500 text-slate-500 hover:bg-red-500 hover:text-slate-100",
+	disabled:
+		"bg-slate-700 text-slate-400 cursor-not-allowed pointer-events-none",
+};
+
 export const Button = ({
 	children,
 	onClick,
 	className,
 }: ButtonProps): ReactNode => {
+	const buttonClassName = `${
+		className === "outlined"
+			? classMap.outlined
+			: className === "contained"
+				? classMap.contained
+				: className === "disabled"
+					? classMap.disabled
+					: classMap[""]
+	} py-2 px-4 rounded-3xl transition-all`;
+
 	return (
-		<button
-			className={`px-4 py-2 bg-amber-400 shadow-custom hover:bg-amber-500 transition-all text-amber-950 rounded-3xl ${className}`}
-			type="button"
-			onClick={onClick}
-		>
+		<button className={buttonClassName} type="button" onClick={onClick}>
 			{children}
 		</button>
 	);

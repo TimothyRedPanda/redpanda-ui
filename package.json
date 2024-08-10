@@ -1,7 +1,7 @@
 {
 	"name": "ui-redpanda",
 	"private": false,
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"type": "module",
 	"license": "MIT",
 	"files": ["dist"],
@@ -29,6 +29,7 @@
 		"prepare": "husky"
 	},
 	"dependencies": {
+		"@storybook/addon-actions": "^8.2.8",
 		"@testing-library/jest-dom": "^6.4.8",
 		"@testing-library/react": "^16.0.0",
 		"@testing-library/user-event": "^14.5.2",
@@ -48,7 +49,7 @@
 		"@storybook/react": "^8.2.8",
 		"@storybook/react-vite": "^8.2.8",
 		"@storybook/test": "^8.2.8",
-		"@types/node": "^22.1.0",
+		"@types/node": "^22.2.0",
 		"@types/react": "^18.3.3",
 		"@types/react-dom": "^18.3.0",
 		"@vitejs/plugin-react": "^4.3.1",

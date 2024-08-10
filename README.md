@@ -10,29 +10,12 @@ npm i ui-redpanda
 2) Import your desired component and the styles.
 
 ```typescript
-import { Button } from 'ui-redpanda';
+import { /* Component Name Here */ } from 'ui-redpanda';
 import "ui-redpanda/dist/style.css";
 ```
 
 3) Use the component.
 
-## Button example
-
-```tsx
-import { Button } from 'ui-redpanda';
-import "ui-redpanda/dist/style.css";
-
-const export App = () => {
-    return <Button>Click Me</Button>
-}
-```
-### Optional className and onClick to customise the click event and styles.
-
-```tsx
-const export App = () => {
-    return <Button className="custom className" onClick={() => {console.log("Custom onClick")}}>Click Me</Button>
-}
-```
 
 ### GitHub
 
@@ -51,8 +34,39 @@ cd ./redpanda-ui
 ```bash
 npm install
 ```
-4) Run Storybook to view the components in the browser.
+4) Run Storybook to view full UI components documentation.
 
 ```bash
 npm run storybook
 ```
+### Components
+
+## Button
+
+```typescript
+import { Button } from "ui-redpanda";
+import "ui-redpanda/dist/style.css";
+
+const App = () => {
+  return (
+    <div>
+      <Button onClick={() => alert("Button clicked!")}>Default</Button>
+    </div>
+  );
+};
+
+export default App;
+```
+
+### Props
+
+The Button component accepts the following props:
+
+* `children` (ReactNode): The content to be displayed inside the button.
+* `onClick?` (function): The function to be called when the button is clicked.
+* `className?` (string): The class name to apply different styles to the button. It can be one of the following values:
+    * `""` (default)
+    * `"contained"`
+    * `"outlined"`
+    * `"disabled"`
+
