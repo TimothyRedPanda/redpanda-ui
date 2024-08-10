@@ -1,5 +1,7 @@
 # Red Panda UI
 
+Visit (Red Panda Studio)[https://red-panda.studio/redpandaui] for visual examples.
+
 ## Getting Started
 
 1) Install Red Panda UI into your React project.
@@ -64,7 +66,7 @@ The Button component accepts the following props:
 
 * `children` (ReactNode): The content to be displayed inside the button.
 * `onClick?` (function): The function to be called when the button is clicked.
-* `className?` (string): The class name to apply different styles to the button. It can be one of the following values:
+* `className?` (string): The class name to apply different styles to the button. Include one of the following in your class name to change styles:
     * `""` (default)
     * `"contained"`
     * `"outlined"`

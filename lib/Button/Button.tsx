@@ -21,11 +21,11 @@ export const Button = ({
 	className,
 }: ButtonProps): ReactNode => {
 	const buttonClassName = `${
-		className === "outlined"
+		className?.includes("outlined")
 			? classMap.outlined
-			: className === "contained"
+			: className?.includes("contained")
 				? classMap.contained
-				: className === "disabled"
+				: className?.includes("disabled")
 					? classMap.disabled
 					: classMap[""]
 	} py-2 px-4 rounded-3xl transition-all`;

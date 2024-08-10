@@ -1,3 +1,5 @@
+import { Button } from "ui-redpanda";
+
 function App() {
 	return (
 		<main
@@ -9,6 +11,7 @@ function App() {
 			}}
 		>
 			<h1>Red Panda UI</h1>
+			<Button className="custom">Click Me</Button>
 		</main>
 	);
 }
