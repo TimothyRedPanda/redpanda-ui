@@ -1,6 +1,6 @@
 # Red Panda UI
 
-Visit (Red Panda Studio)[https://red-panda.studio/redpandaui] for visual examples.
+Visit [Red Panda Studio](https://red-panda.studio/redpandaui) for visual examples.
 
 ## Getting Started
 
