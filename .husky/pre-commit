@@ -1,3 +1,4 @@
+npx lint-staged
 snyk test
 snyk code test
 npm run build
