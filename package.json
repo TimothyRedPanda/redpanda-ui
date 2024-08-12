@@ -4,9 +4,7 @@
 	"version": "0.1.4",
 	"type": "module",
 	"license": "MIT",
-	"files": [
-		"dist"
-	],
+	"files": ["dist"],
 	"main": "dist/ui-redpanda.umd.cjs",
 	"module": ".dist/ui-redpanda.js",
 	"exports": {
@@ -66,9 +64,6 @@
 		"vitest": "^2.0.5"
 	},
 	"lint-staged": {
-		"*.{js,jsx,ts,tsx}": [
-			"vitest run --passWithNoTests",
-			"git add"
-		]
+		"*.{js,jsx,ts,tsx}": ["vitest run --passWithNoTests"]
 	}
 }
