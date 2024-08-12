@@ -4,7 +4,9 @@
 	"version": "0.1.4",
 	"type": "module",
 	"license": "MIT",
-	"files": ["dist"],
+	"files": [
+		"dist"
+	],
 	"main": "dist/ui-redpanda.umd.cjs",
 	"module": ".dist/ui-redpanda.js",
 	"exports": {
@@ -23,7 +25,7 @@
 		"prepublish": "npm run build",
 		"preview": "vite preview",
 		"storybook": "storybook dev -p 6006",
-		"test": "vitest",
+		"test": "vitest run --passWithNoTests",
 		"coverage": "vitest --coverage",
 		"prepare": "husky"
 	},
@@ -33,7 +35,6 @@
 		"@testing-library/react": "^16.0.0",
 		"@testing-library/user-event": "^14.5.2",
 		"jsdom": "^24.1.1",
-		"lint-staged": "^15.2.8",
 		"react": "^18.3.1",
 		"react-dom": "^18.3.1",
 		"vite-tsconfig-paths": "^5.0.1"
@@ -62,8 +63,5 @@
 		"vite": "^5.4.0",
 		"vite-plugin-dts": "^4.0.2",
 		"vitest": "^2.0.5"
-	},
-	"lint-staged": {
-		"*.{js,jsx,ts,tsx}": ["vitest run --passWithNoTests"]
 	}
 }
