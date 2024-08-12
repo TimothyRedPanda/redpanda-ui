@@ -7,7 +7,10 @@ export default {
 	theme: {
 		extend: {
 			boxShadow: {
-				"custom": " -6px 6px 18px #c2c2c2",
+				custom: " -6px 6px 18px #c2c2c2",
+			},
+			fontFamily: {
+				inherit: "inherit",
 			},
 		},
 	},

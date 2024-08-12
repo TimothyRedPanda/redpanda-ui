@@ -8,11 +8,11 @@ interface ButtonProps {
 
 const classMap = {
 	"": "bg-transparent text-slate-400 hover:text-slate-800 font-bold",
-	contained: "bg-red-400 text-slate-100 hover:bg-red-800",
+	contained: "bg-amber-500 text-slate-50 hover:bg-amber-400",
 	outlined:
-		"border border-red-500 text-slate-500 hover:bg-red-500 hover:text-slate-100",
+		"border border-amber-500 bg-amber-500 bg-opacity-0 text-slate-500 hover:bg-opacity-10",
 	disabled:
-		"bg-slate-700 text-slate-400 cursor-not-allowed pointer-events-none",
+		"bg-slate-700 text-slate-400 cursor-not-allowed pointer-events-none font-inherit",
 };
 
 export const Button = ({
@@ -28,7 +28,7 @@ export const Button = ({
 				: className?.includes("disabled")
 					? classMap.disabled
 					: classMap[""]
-	} py-2 px-4 rounded-3xl transition-all`;
+	} py-2 px-4 rounded-3xl transition-all w-fit duration-500`;
 
 	return (
 		<button className={buttonClassName} type="button" onClick={onClick}>

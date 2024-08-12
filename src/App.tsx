@@ -8,6 +8,8 @@ function App() {
 				width: "100%",
 				justifyContent: "center",
 				overflow: "hidden",
+				fontWeight: 600,
+				fontFamily: "fantasy",
 			}}
 		>
 			<h1>Red Panda UI</h1>
