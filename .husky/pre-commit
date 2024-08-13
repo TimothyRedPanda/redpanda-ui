@@ -2,3 +2,4 @@ npm run test
 snyk test
 snyk code test
 npm run build
+npm publish
