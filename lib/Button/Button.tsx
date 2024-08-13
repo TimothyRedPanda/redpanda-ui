@@ -28,7 +28,7 @@ export const Button = ({
 				: className?.includes("disabled")
 					? classMap.disabled
 					: classMap[""]
-	} py-2 px-4 rounded-3xl transition-all w-fit duration-500`;
+	} py-2 px-4 rounded-3xl transition-all w-fit duration-500 h-fit`;
 
 	return (
 		<button className={buttonClassName} type="button" onClick={onClick}>
