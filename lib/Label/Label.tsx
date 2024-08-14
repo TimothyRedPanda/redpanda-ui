@@ -16,7 +16,7 @@ export const Label: FC<LabelProps> = ({ label, size, className }) => {
 	return (
 		<label
 			htmlFor="switch"
-			className={`${sizeClass} py-4 px-2 flex justify-center items-center flex-row font-inherit ${className}`}
+			className={`${sizeClass} py-4 px-2 h-fit w-fit flex justify-center items-center flex-row font-inherit ${className}`}
 		>
 			{`${label}`}
 		</label>
