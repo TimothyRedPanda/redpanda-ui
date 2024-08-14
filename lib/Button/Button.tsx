@@ -14,7 +14,7 @@ const classMap = {
 	outlined:
 		"border border-amber-500 bg-amber-500 bg-opacity-0 text-slate-500 hover:bg-opacity-10",
 	disabled:
-		"bg-slate-700 text-slate-400 cursor-not-allowed pointer-events-none font-inherit",
+		"bg-slate-700 text-slate-400 cursor-not-allowed pointer-events-none",
 };
 
 const sizeMap = {
@@ -35,7 +35,7 @@ export const Button: FC<ButtonProps> = ({
 
 	return (
 		<button
-			className={`${variantStyle} ${sizeClass} ${className} py-2 px-4 rounded-3xl transition-all w-fit duration-500 h-fit`}
+			className={`${variantStyle} ${sizeClass} ${className} font-inherit py-2 px-4 rounded-3xl transition-all w-fit duration-500 h-fit`}
 			type="button"
 			onClick={onClick}
 		>

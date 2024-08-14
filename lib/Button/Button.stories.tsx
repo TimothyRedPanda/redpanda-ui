@@ -16,6 +16,7 @@ export default meta;
 type Story = StoryObj<typeof Button>;
 
 export const Default: Story = {
+	name: "Default Button",
 	args: {
 		children: "Default",
 		onClick: action("onClick Triggered"),
@@ -23,15 +24,16 @@ export const Default: Story = {
 };
 
 export const Contained: Story = {
+	name: "Contained Button",
 	args: {
 		children: "Contained",
 		variant: "contained",
 		onClick: action("onClick Triggered"),
-		size: "small",
 	},
 };
 
 export const Outlined: Story = {
+	name: "Outlined Button",
 	args: {
 		children: "Outlined",
 		variant: "outlined",
@@ -40,10 +42,10 @@ export const Outlined: Story = {
 };
 
 export const Disabled: Story = {
+	name: "Disabled Button",
 	args: {
 		children: "Disabled",
 		variant: "disabled",
 		onClick: action("onClick Triggered"),
-		size: "large",
 	},
 };

@@ -1,36 +1,5 @@
 Visit [Red Panda Studio](https://red-panda.studio/redpandaui) for visual examples.
 
-## Getting Started
-
-1) Install Red Panda UI into your React project.
-
-```bash
-npm i ui-redpanda
-```
-2) Import your desired component and the styles.
-
-```typescript
-import { Button /* Or the component of your choice */ } from 'ui-redpanda';
-import "ui-redpanda/dist/style.css";
-```
-
-3) Use the component.
-
-```typescript
-import { Button } from "ui-redpanda";
-import "ui-redpanda/dist/style.css";
-
-const App = () => {
-  return (
-    <div>
-      <Button>Default</Button>
-    </div>
-  );
-};
-
-export default App;
-```
-
 ### GitHub
 
 1) Clone the project down.
@@ -54,7 +23,50 @@ npm install
 npm run storybook
 ```
 
+# Getting Started
+
+1) Install Red Panda UI into your React project.
+
+```bash
+npm i ui-redpanda
+```
+2) Import your desired component and the styles.
+
+```typescript
+import { Button /* Or the component of your choice */ } from 'ui-redpanda';
+import "ui-redpanda/dist/style.css";
+```
+
+3) Use the component.
+
+```typescript
+import { Button, Switch } from "ui-redpanda";
+import "ui-redpanda/dist/style.css";
+
+const App = () => {
+  return (
+    <div>
+      <Button>Default</Button>
+      <Switch />
+    </div>
+  );
+};
+
+export default App;
+```
+
 ### Components
+
+Each component has a `className` prop if you wish to add your own class. Just to allow you to reference it in `CSS` if you wish. Remember though any styles you apply in `CSS` will have to have the `!important` tag.
+
+```css
+
+.yourClass {
+  /* !important is needed to override the default styles. */
+  background-color: #fff !important;
+}
+
+```
 
 ## Button
 
@@ -62,19 +74,31 @@ npm run storybook
 
 The Button component accepts the following props:
 
-* `children` (ReactNode): The content to be displayed inside the button.
+* `children` (ReactNode, required): The content to be displayed inside the button.
 
-* `onClick?` (function): The function to be called when the button is clicked.
+* `onClick` (function, optional): The function to be called when the button is clicked.
 
-* `variant?` (string): The variant of the button.
+* `variant` (string, optional): The style variant, can be `contained`, `outlined` or `disabled`.
 
-    * `No variant prop` (default styles will be applied)
-    * `"contained"`
-    * `"outlined"`
-    * `"disabled"`
+* `size` (string, optional): Size of the button, can be `small`, `base`(default size) or `large`.
 
-* `size` (string): Size of the button.
 
-    * `"small"`
-    * `"base"` (If no size prop is given `"base"` will be the default)
-    * `"large"`
+## Switch
+
+### Props
+
+The Switch component accepts the following props:
+
+* `onClick` (function, optional): The function to be called when the switch is toggled.
+
+* `variant` (string, optional): The style variant, can be `live` or `disabled`.
+
+## Label
+
+### Props
+
+The Label component accepts the following props:
+
+* `label` (string, required): The actual text the label says.
+
+* `size` (string, optional): Text size, can be `small`, `base`(default size) or `large`.
