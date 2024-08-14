@@ -22,5 +22,3 @@ export const Label: FC<LabelProps> = ({ label, size, className }) => {
 		</label>
 	);
 };
-
-export default Label;

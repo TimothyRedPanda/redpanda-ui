@@ -32,5 +32,3 @@ export const Switch: FC<SwitchProps> = ({ variant, onClick, className }) => {
 		</label>
 	);
 };
-
-export default Switch;
