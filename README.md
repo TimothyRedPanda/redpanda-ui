@@ -40,7 +40,7 @@ import "ui-redpanda/dist/style.css";
 3) Use the component.
 
 ```typescript
-import { Button, Switch } from "ui-redpanda";
+import { Button, Switch, Label } from "ui-redpanda";
 import "ui-redpanda/dist/style.css";
 
 const App = () => {
@@ -48,6 +48,7 @@ const App = () => {
     <div>
       <Button>Default</Button>
       <Switch />
+      <Label label="Your label here"/>
     </div>
   );
 };
