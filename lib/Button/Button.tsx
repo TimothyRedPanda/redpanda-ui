@@ -1,8 +1,10 @@
-import type { ReactNode } from "react";
+import type { FC, ReactNode } from "react";
 
 interface ButtonProps {
 	children: ReactNode;
 	onClick?: () => void;
+	variant?: "contained" | "outlined" | "disabled";
+	size?: "small" | "base" | "large";
 	className?: string;
 }
 
@@ -15,23 +17,28 @@ const classMap = {
 		"bg-slate-700 text-slate-400 cursor-not-allowed pointer-events-none font-inherit",
 };
 
-export const Button = ({
+const sizeMap = {
+	small: "text-sm",
+	base: "text-base",
+	large: "text-lg",
+};
+
+export const Button: FC<ButtonProps> = ({
 	children,
 	onClick,
+	variant,
+	size,
 	className,
-}: ButtonProps): ReactNode => {
-	const buttonClassName = `${
-		className?.includes("outlined")
-			? classMap.outlined
-			: className?.includes("contained")
-				? classMap.contained
-				: className?.includes("disabled")
-					? classMap.disabled
-					: classMap[""]
-	} py-2 px-4 rounded-3xl transition-all w-fit duration-500 h-fit`;
+}) => {
+	const variantStyle = classMap[variant ?? ""];
+	const sizeClass = sizeMap[size ?? "base"];
 
 	return (
-		<button className={buttonClassName} type="button" onClick={onClick}>
+		<button
+			className={`${variantStyle} ${sizeClass} ${className} py-2 px-4 rounded-3xl transition-all w-fit duration-500 h-fit`}
+			type="button"
+			onClick={onClick}
+		>
 			{children}
 		</button>
 	);

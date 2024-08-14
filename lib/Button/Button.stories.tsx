@@ -25,15 +25,16 @@ export const Default: Story = {
 export const Contained: Story = {
 	args: {
 		children: "Contained",
-		className: "contained",
+		variant: "contained",
 		onClick: action("onClick Triggered"),
+		size: "small",
 	},
 };
 
 export const Outlined: Story = {
 	args: {
 		children: "Outlined",
-		className: "outlined",
+		variant: "outlined",
 		onClick: action("onClick Triggered"),
 	},
 };
@@ -41,7 +42,8 @@ export const Outlined: Story = {
 export const Disabled: Story = {
 	args: {
 		children: "Disabled",
-		className: "disabled",
+		variant: "disabled",
 		onClick: action("onClick Triggered"),
+		size: "large",
 	},
 };

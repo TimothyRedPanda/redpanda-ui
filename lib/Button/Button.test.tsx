@@ -4,16 +4,16 @@ import { describe, it, expect, vi } from "vitest";
 
 describe("Button Component", () => {
 	const renderButton = (
-		text: string,
-		className?: string,
+		children: string,
+		variant?: "contained" | "outlined" | "disabled",
 		onClick?: () => void,
 	) => {
 		const { getByText } = render(
-			<Button className={className} onClick={onClick}>
-				{text}
+			<Button variant={variant} onClick={onClick}>
+				{children}
 			</Button>,
 		);
-		return getByText(text);
+		return getByText(children);
 	};
 
 	const commonAssertions = (buttonElement: HTMLElement) => {

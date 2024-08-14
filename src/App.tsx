@@ -13,7 +13,7 @@ function App() {
 			}}
 		>
 			<h1>Red Panda UI</h1>
-			<Button className="custom">Click Me</Button>
+			<Button variant="outlined">Click Me</Button>
 		</main>
 	);
 }
