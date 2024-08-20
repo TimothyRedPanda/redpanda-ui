@@ -1,7 +1,7 @@
 {
 	"name": "ui-redpanda",
 	"private": false,
-	"version": "0.2.6",
+	"version": "0.2.7",
 	"type": "module",
 	"license": "MIT",
 	"files": ["dist"],

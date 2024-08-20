@@ -28,7 +28,7 @@ npm run storybook
 1) Install Red Panda UI into your React project.
 
 ```bash
-npm i ui-redpanda
+npm i ui-redpanda@latest
 ```
 2) Import your desired component and the styles.
 

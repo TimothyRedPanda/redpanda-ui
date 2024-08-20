@@ -1,5 +1,6 @@
 import { useState } from "react";
 import sanitizeInput from "./sanitiseInput";
+import TickIcon from "./Tick";
 
 interface InputProps {
 	type: "checkbox" | "radio" | "date" | "text" | "number";
@@ -38,11 +39,7 @@ export const Input: React.FC<InputProps> = ({
 		case "checkbox":
 			return (
 				<span
-					className={`${checked ? "bg-amber-500" : "bg-amber-50"} rounded-md transition-all duration-1000 h-5 w-5 border-2 border-amber-500 ${className}`}
-					style={{
-						display: "inline-block",
-						aspectRatio: "1 / 1",
-					}}
+					className={`${checked ? "bg-amber-500" : "bg-amber-50"} inline-block aspect-square relative rounded-md transition-all duration-1000 h-6 w-6 border-2 border-amber-500 ${className}`}
 				>
 					<input
 						type={type}
@@ -50,12 +47,15 @@ export const Input: React.FC<InputProps> = ({
 						className="w-full h-full opacity-0 cursor-pointer"
 						onClick={handleClick}
 					/>
+					<span className="absolute pointer-events-none top-0 left-0 w-full h-full p-1 flex items-center justify-center text-white">
+						<TickIcon visible={checked ? "visible" : "invisible"} />
+					</span>
 				</span>
 			);
 		case "radio":
 			return (
 				<span
-					className={`${checked ? "bg-amber-500" : "bg-amber-50"} rounded-full transition-all duration-1000 h-5 w-5 border-2 border-amber-500 ${className}`}
+					className={`${checked ? "bg-amber-500" : "bg-amber-50"} relative rounded-full transition-all duration-1000 h-6 w-6 border-2 border-amber-500 ${className}`}
 					style={{
 						display: "inline-block",
 						aspectRatio: "1 / 1",
@@ -67,6 +67,9 @@ export const Input: React.FC<InputProps> = ({
 						className="w-full h-full opacity-0 cursor-pointer"
 						onClick={handleClick}
 					/>
+					<span className="absolute pointer-events-none inset-0 flex items-center justify-center">
+						<span className="rounded-full w-3 h-3 bg-white" />
+					</span>
 				</span>
 			);
 		default:
