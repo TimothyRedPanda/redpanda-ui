@@ -40,7 +40,7 @@ import "ui-redpanda/dist/style.css";
 3) Use the component.
 
 ```typescript
-import { Button, Switch, Label } from "ui-redpanda";
+import { Button, Switch, Label, Input } from "ui-redpanda";
 import "ui-redpanda/dist/style.css";
 
 const App = () => {
@@ -49,6 +49,7 @@ const App = () => {
       <Button>Default</Button>
       <Switch />
       <Label label="Your label here"/>
+      <Input type="text" sanitized/>
     </div>
   );
 };
@@ -103,3 +104,29 @@ The Label component accepts the following props:
 * `label` (string, required): The actual text the label says.
 
 * `size` (string, optional): Text size, can be `small`, `base`(default size) or `large`.
+
+
+## Input
+
+### Props
+
+The Input component accepts the following props:
+
+* `type` (string, required): The type of the input, e.g., `text`, `checkbox`, `radio`, `number` or `date`.
+
+* `defaultValue` (string, optional): The default value of the input.
+
+* `className` (string, optional): Additional class names for styling the input.
+
+* `onChange` (function, optional): The function to be called when the input value changes.
+
+* `onClick` (function, optional): The function to be called when the input is clicked.
+
+* `sanitized` (boolean, optional): If you simply - `<Input sanitized/>`. Then any text input will be sanitized. If you wish to do your own sanitization then simply leave this off.
+
+Sanitization includes -
+  * Escape special characters.
+  * HTML tags.
+  * Script tags.
+  * Event handlers.
+  * CSS expressions.

@@ -20,6 +20,7 @@ export const Default: Story = {
 		type: "text",
 		onChange: action("onChange"),
 		onClick: action("onClick"),
+		sanitized: false,
 	},
 };
 
