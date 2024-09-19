@@ -40,7 +40,7 @@ import "ui-redpanda/dist/style.css";
 3) Use the component.
 
 ```typescript
-import { Button, Switch, Label, Input } from "ui-redpanda";
+import { Button, Switch, Label, Input, Textbox } from "ui-redpanda";
 import "ui-redpanda/dist/style.css";
 
 const App = () => {
@@ -50,6 +50,7 @@ const App = () => {
       <Switch />
       <Label label="Your label here"/>
       <Input type="text" sanitized/>
+      <Textbox name="Your text box" placeholder="Type here..." />
     </div>
   );
 };
@@ -124,7 +125,22 @@ The Input component accepts the following props:
 
 * `sanitized` (boolean, optional): If you simply - `<Input sanitized/>`. Then any text input will be sanitized. If you wish to do your own sanitization then simply leave this off.
 
-Sanitization includes -
+## Textbox
+### Props
+The Textbox component accepts the following props:
+
+* `rows` (number, optional): The number of `rows` for the textarea. Default is `4`.
+* `cols` (number, optional): The number of columns for the textarea. Default is `50`.
+* `name` (string, optional): The name attribute of the textarea. Default is "textbox".
+* `className` (string, optional): Additional class names for styling the textarea.
+* `onChange` (function, optional): The function to be called when the textarea value changes.
+* `sanitized` (boolean, optional): If set to true, the input will be sanitized to prevent special characters, HTML, and other potentially dangerous inputs.
+* `placeholder` (string, optional): The placeholder text for the textarea. Default is "Text area...".
+
+
+
+## Sanitization 
+Can be toggled on `Textbox` and `Input` components -
   * Escape special characters.
   * HTML tags.
   * Script tags.
